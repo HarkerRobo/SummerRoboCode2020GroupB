@@ -43,9 +43,30 @@ public class Drivetrain extends HSSwerveDrivetrain {
    public static final int BL_OFFSET = 1582;
    public static final int BR_OFFSET = 5891;
 
+   public static final int DRIVE_VELOCITY_SLOT = 0;
+   public static final int ANGLE_POSITION_SLOT = 0;
+   
+   public static final double POSITION_KP = 0;
+   public static final double POSITION_KI = 0;
+   public static final double POSITION_KD = 0;
+
+   public static final double VELOCITY_KF = 0;
+   public static final double VELOCITY_KP = 0;
+   public static final double VELOCITY_KI = 0;
+   public static final double VELOCITY_KD = 0;
+   
+   public static final double VELOCITY_RAMPRATE = 0;
+   public static final double POSITION_RAMPRATE = 0;
+
+   public static final double PIGEON_KP = 0;
+
+   public static final double MAX_DRIVE_VELOCITY = 4; 
+   public static final double MAX_ROTATION_VELOCITY = 3 * Math.PI;
+
    private Drivetrain() {
       super(initModules(), initPigeon(), CHASSIS_WIDTH, CHASSIS_LENGTH);
-      // TODO Auto-generated constructor stub
+      setupPositionPID(ANGLE_POSITION_SLOT, POSITION_KP, POSITION_KI, POSITION_KD, POSITION_RAMPRATE);
+      setupVelocityPID(DRIVE_VELOCITY_SLOT, VELOCITY_KF, VELOCITY_KP, VELOCITY_KI, VELOCITY_KD, VELOCITY_RAMPRATE);
    }
 
    public static Drivetrain getInstance() {
