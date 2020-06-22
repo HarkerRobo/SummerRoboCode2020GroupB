@@ -17,4 +17,9 @@ public class RobotMap {
     public static final int BR_DRIVE_ID = 6;
     public static final int BR_ANGLE_ID = 7;
 
+    public static final int INTAKE_TALON_ID = 10;
+
+    public static final int FORWARD_INTAKE_SOLENOID_PORT = 7;
+    public static final int REVERSE_INTAKE_SOLENOID_PORT = 0;
+
 }
