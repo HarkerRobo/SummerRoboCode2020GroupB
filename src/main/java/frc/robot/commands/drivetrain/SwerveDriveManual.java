@@ -15,9 +15,7 @@ public class SwerveDriveManual extends SwerveManual {
 
    public static final double OUTPUT_MULTIPLIER = 0.5;
 
-   public SwerveDriveManual(HSSwerveDrivetrain drivetrain, int driveVelocitySlot, int anglePositionSlot,
-         HSGamepad gamepad, double maxDriveVelocity, double maxRotationVelocity, double pigeon_kP,
-         double outputMultiplier) {
+   public SwerveDriveManual() {
       super(Drivetrain.getInstance(), Drivetrain.DRIVE_VELOCITY_SLOT, Drivetrain.ANGLE_POSITION_SLOT, OI.getInstance().getDriverGamepad(), Drivetrain.MAX_DRIVE_VELOCITY, Drivetrain.MAX_ROTATION_VELOCITY, Drivetrain.PIGEON_KP,
             OUTPUT_MULTIPLIER);
    }
