@@ -1,5 +1,7 @@
 package frc.robot;
 
+import frc.robot.subsystems.Intake;
+import harkerrobolib.commands.CallMethodCommand;
 import harkerrobolib.wrappers.XboxGamepad;
 
 /**
@@ -24,6 +26,10 @@ public class OI
    private OI() {
         driverGamepad = new XboxGamepad(DRIVER_GAMEPAD_PORT);
         operatorGamepad = new XboxGamepad(OPERATOR_GAMEPAD_PORT);
+   }
+   
+   public void initBindings(){
+       driverGamepad.getButtonB().whenPressed(new CallMethodCommand(() -> Intake.getInstance().toggleSolenoid()));
    }
    
    public static OI getInstance() {
