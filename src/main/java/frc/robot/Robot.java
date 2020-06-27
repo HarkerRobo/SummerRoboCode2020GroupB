@@ -10,6 +10,8 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.commands.drivetrain.SwerveDriveManual;
+import frc.robot.commands.intake.IntakeDefault;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Intake;
 
@@ -35,8 +37,8 @@ public class Robot extends TimedRobot {
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
-    Drivetrain.getInstance();
-    Intake.getInstance();
+    Drivetrain.getInstance().setDefaultCommand(new SwerveDriveManual());
+    Intake.getInstance().setDefaultCommand(new IntakeDefault());
   }
 
   /**
