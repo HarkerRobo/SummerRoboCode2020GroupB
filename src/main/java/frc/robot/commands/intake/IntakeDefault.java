@@ -24,7 +24,10 @@ public class IntakeDefault extends IndefiniteCommand {
    public void execute()
    {
         if(OI.getInstance().getDriverGamepad().getRightTrigger()>=TRIGGER_THRESHOLD)
-           Intake.getInstance().setOutput(INTAKE_MAGNITUDE);
+        {
+            Intake.getInstance().setOutput(INTAKE_MAGNITUDE);
+            System.out.println("intaking");
+        }
         else if(OI.getInstance().getDriverGamepad().getLeftTrigger()>=TRIGGER_THRESHOLD)
             Intake.getInstance().setOutput(-INTAKE_MAGNITUDE);
         else

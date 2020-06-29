@@ -39,6 +39,7 @@ public class Robot extends TimedRobot {
     SmartDashboard.putData("Auto choices", m_chooser);
     Drivetrain.getInstance().setDefaultCommand(new SwerveDriveManual());
     Intake.getInstance().setDefaultCommand(new IntakeDefault());
+    OI.getInstance();
   }
 
   /**
@@ -51,6 +52,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+    SmartDashboard.putString("intake state", Intake.getInstance().getSolenoid().get().toString());
   }
 
   /**
