@@ -46,19 +46,19 @@ public class Drivetrain extends HSSwerveDrivetrain {
    public static final int DRIVE_VELOCITY_SLOT = 0;
    public static final int ANGLE_POSITION_SLOT = 0;
    
-   public static final double POSITION_KP = 0;
-   public static final double POSITION_KI = 0;
-   public static final double POSITION_KD = 0;
+   public static final double POSITION_KP = 1.1;
+   public static final double POSITION_KI = 0.0;
+   public static final double POSITION_KD = 11;
 
-   public static final double VELOCITY_KF = 0;
-   public static final double VELOCITY_KP = 0;
-   public static final double VELOCITY_KI = 0;
-   public static final double VELOCITY_KD = 0;
+   public static final double VELOCITY_KF = 0.06;
+   public static final double VELOCITY_KP = 0.7;
+   public static final double VELOCITY_KI = 0.0;
+   public static final double VELOCITY_KD = 10;
    
-   public static final double VELOCITY_RAMPRATE = 0;
-   public static final double POSITION_RAMPRATE = 0;
+   public static final double VELOCITY_RAMPRATE = 0.1;
+   public static final double POSITION_RAMPRATE = 0.2;
 
-   public static final double PIGEON_KP = 0;
+   public static final double PIGEON_KP = 0.05;
 
    public static final double MAX_DRIVE_VELOCITY = 4; 
    public static final double MAX_ROTATION_VELOCITY = 3 * Math.PI;
