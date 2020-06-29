@@ -17,20 +17,20 @@ public class Drivetrain extends HSSwerveDrivetrain {
    public static final TalonFXInvertType BR_DRIVE_INVERT = TalonFXInvertType.Clockwise;
    
    
-   public static final boolean TL_ANGLE_INVERT = false;
+   public static final boolean TL_ANGLE_INVERT = true;
    public static final boolean TR_ANGLE_INVERT = true;
-   public static final boolean BL_ANGLE_INVERT = false;
-   public static final boolean BR_ANGLE_INVERT = true;
+   public static final boolean BL_ANGLE_INVERT = true;
+   public static final boolean BR_ANGLE_INVERT = false;
     
    
-   public static final boolean TL_DRIVE_SENSOR_PHASE = false;
-   public static final boolean TR_DRIVE_SENSOR_PHASE = false;
+   public static final boolean TL_DRIVE_SENSOR_PHASE = true;
+   public static final boolean TR_DRIVE_SENSOR_PHASE = true;
    public static final boolean BL_DRIVE_SENSOR_PHASE = false;
    public static final boolean BR_DRIVE_SENSOR_PHASE = false;
    
-   public static final boolean TL_ANGLE_SENSOR_PHASE = false;
-   public static final boolean TR_ANGLE_SENSOR_PHASE = false;
-   public static final boolean BL_ANGLE_SENSOR_PHASE = false;
+   public static final boolean TL_ANGLE_SENSOR_PHASE = true;
+   public static final boolean TR_ANGLE_SENSOR_PHASE = true;
+   public static final boolean BL_ANGLE_SENSOR_PHASE = true;
    public static final boolean BR_ANGLE_SENSOR_PHASE = false;
    
    public static final double CHASSIS_WIDTH = 0.535; //meters
