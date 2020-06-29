@@ -26,6 +26,7 @@ public class OI
    private OI() {
         driverGamepad = new XboxGamepad(DRIVER_GAMEPAD_PORT);
         operatorGamepad = new XboxGamepad(OPERATOR_GAMEPAD_PORT);
+        initBindings();
    }
    
    public void initBindings(){
