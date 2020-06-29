@@ -10,6 +10,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.commands.drivetrain.SwerveDriveManual;
 import frc.robot.commands.intake.IntakeDefault;
 import frc.robot.subsystems.Drivetrain;
@@ -52,6 +53,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+    CommandScheduler.getInstance().run();
+
     SmartDashboard.putString("intake state", Intake.getInstance().getSolenoid().get().toString());
   }
 
@@ -87,6 +90,8 @@ public class Robot extends TimedRobot {
         // Put default auto code here
         break;
     }
+    CommandScheduler.getInstance().run();
+
   }
 
   /**
@@ -94,6 +99,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
+    CommandScheduler.getInstance().run();
   }
 
   /**
@@ -101,5 +107,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void testPeriodic() {
+    CommandScheduler.getInstance().run();
   }
 }
