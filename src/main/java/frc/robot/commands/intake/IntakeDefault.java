@@ -7,8 +7,8 @@ import harkerrobolib.commands.IndefiniteCommand;
 public class IntakeDefault extends IndefiniteCommand {
    
    public static final double TRIGGER_THRESHOLD = 0.4;
-   public static final double INTAKE_MAGNITUDE = 0.4;
-   public static final double SLOW_OUTTAKE_MAGNITUDE = -0.2;
+   public static final double INTAKE_MAGNITUDE = -0.4;
+   public static final double SLOW_OUTTAKE_MAGNITUDE = 0.2;
    
    public IntakeDefault(){
       addRequirements(Intake.getInstance());
