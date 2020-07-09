@@ -1,6 +1,7 @@
 package frc.robot;
 
 import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.Shooter;
 import harkerrobolib.commands.CallMethodCommand;
 import harkerrobolib.wrappers.XboxGamepad;
 
@@ -31,6 +32,7 @@ public class OI
    
    public void initBindings(){
        driverGamepad.getButtonB().whenPressed(new CallMethodCommand(() -> Intake.getInstance().toggleSolenoid()));
+       driverGamepad.getButtonX().whenPressed(new CallMethodCommand(() -> Shooter.getInstance().toggleSolenoid()));
    }
    
    public static OI getInstance() {
