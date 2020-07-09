@@ -22,4 +22,9 @@ public class RobotMap {
     public static final int FORWARD_INTAKE_SOLENOID_PORT = 7;
     public static final int REVERSE_INTAKE_SOLENOID_PORT = 0;
 
+    public static final int SHOOTER_MASTER_ID = 8;
+    public static final int SHOOTER_FOLLOWER_ID = 9;
+
+    public static final int FORWARD_SHOOTER_SOLENOID_PORT = 1;
+    public static final int REVERSE_SHOOTER_SOLENOID_PORT = 6;
 }

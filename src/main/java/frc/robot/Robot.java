@@ -15,6 +15,7 @@ import frc.robot.commands.drivetrain.SwerveDriveManual;
 import frc.robot.commands.intake.IntakeDefault;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.Shooter;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -40,6 +41,7 @@ public class Robot extends TimedRobot {
     SmartDashboard.putData("Auto choices", m_chooser);
     Drivetrain.getInstance().setDefaultCommand(new SwerveDriveManual());
     Intake.getInstance().setDefaultCommand(new IntakeDefault());
+    Shooter.getInstance();
     OI.getInstance();
   }
 
