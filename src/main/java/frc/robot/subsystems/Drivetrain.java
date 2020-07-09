@@ -9,7 +9,7 @@ import harkerrobolib.wrappers.HSPigeon;
 
 public class Drivetrain extends HSSwerveDrivetrain {
 
-   public static Drivetrain drivetrain;
+   private static Drivetrain drivetrain;
    
    public static final TalonFXInvertType TL_DRIVE_INVERT = TalonFXInvertType.Clockwise;
    public static final TalonFXInvertType TR_DRIVE_INVERT = TalonFXInvertType.Clockwise;
